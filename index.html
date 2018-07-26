@@ -10,19 +10,25 @@
         crossorigin="anonymous">
     <!-- <link href="https://fonts.googleapis.com/css?family=Advent+Pro:100" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <script type="text/javascript" src="js/progressbar.js"></script>
-    <div class="container">
+    <div class="container-nonstarp">
         <div class="side-left">
             <h1>ADev</h1>
             <div class="work-on">
-                <p>
-                    Developer
-                    <br/> Desiner
-                </p>
+                Developer
+                <br/> Desiner
             </div>
             <div class="shortnote">
                 ADev is my code name. I solve problem by creating
@@ -53,56 +59,68 @@
             </div>
         </div>
         <div class="side-right">
+            <section id="personal" class="four">
+                <h1>Who am I</h1>
+                <div class="subSection">
+                    <!-- <h4 class="subSectionHead">
+                        Intro
+                    </h4> -->
+                    <p class="IntroContain">
+                        Iam Amal Chandran love to talk in the language of computers. Enthusiastic about technology and its progress. Moving with
+                        the open source. Persueing B.Tech CSE in CEP. I have also got some people to power me up form CEP.
+                    </p>
+                </div>
+            </section>
             <section id="projects" class="one">
-                <h1>Projects Worked On</h1>
-                <div class="projectContain">
-                    <div class="projectBox">
+                <h1>Projects</h1>
+                <div class="row row-margin">
+                    <div class="projectBox col-md-6 col-lg-4">
                         <div style="background-image:url('./img/projectImg/twitterClone.png'); " class="projectImg"></div>
 
                         <div class="details">
                             <h2 class="detailHead">Twitter Clone (HPDF)</h2>
-                            <div class="discription">twitter ui cloned using react and materilize</div>
+                            <div class="discription">twitter ui cloned using react and material-ui</div>
                         </div>
                     </div>
 
-                    <div class="projectBox">
+                    <div class="projectBox col-md-6 col-lg-4">
                         <div style="background-image:url('./img/projectImg/iplbox.png'); " class="projectImg"></div>
 
                         <div class="details">
                             <h2 class="detailHead">IPL Box (HPDF)</h2>
-                            <div class="discription">ipl app for amazone echo using react and materilize</div>
+                            <div class="discription">ipl app for amazon echo using react and material-ui</div>
                         </div>
                     </div>
 
-                    <div class="projectBox">
+                    <div class="projectBox col-md-6 col-lg-4">
                         <div style="background-image:url('./img/projectImg/sporta.png'); " class="projectImg"></div>
 
                         <div class="details">
                             <h2 class="detailHead">CEP Sports website</h2>
-                            <div class="discription">cep anual sports meet 2017 website</div>
+                            <div class="discription">cep annual sports meet 2017 website</div>
                         </div>
                     </div>
 
-                    <div class="projectBox">
+                    <div class="projectBox col-md-6 col-lg-4">
                         <div style="background-image:url('./img/projectImg/swiggy.png'); " class="projectImg"></div>
 
                         <div class="details">
-                            <h2 class="detailHead">Food ordeing app</h2>
+                            <h2 class="detailHead">Food ordering app</h2>
                             <div class="discription">food ordering app template for hasura hub</div>
                         </div>
                     </div>
 
-                    <div class="projectBox">
+                    <div class="projectBox col-md-6 col-lg-4">
                         <div style="background-image:url('./img/projectImg/zaper.png'); " class="projectImg"></div>
 
                         <div class="details">
-                            <h2 class="detailHead">Zaper File Backup</h2>
-                            <div class="discription">zaper api template for hasura hub</div>
+                            <h2 class="detailHead">Zapier File Backup</h2>
+                            <div class="discription">zapier api template for hasura hub</div>
                         </div>
                     </div>
 
 
-                    <div class="projectBox">
+                    <div class="projectBox col-md-6 col-lg-4">
                         <div style="background-image:url('./img/projectImg/entityextract.png'); " class="projectImg"></div>
 
                         <div class="details">
@@ -113,67 +131,67 @@
                 </div>
             </section>
             <section id="skills" class="two">
-                <h1>Skills I Have</h1>
+                <h1>Skills</h1>
                 <div class="subSection">
                     <h4 class="subSectionHead">Web Dev</h4>
                     <div class="lanContainRow">
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/js.svg')" id="lanJavascript"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/js.svg')" id="lanJavascript"></div>
                             <div class="lanName">JavaScript</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/php.svg')" id="lanPhp"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/php.svg')" id="lanPhp"></div>
                             <div class="lanName">PHP</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/html5.svg')" id="lanHtml5"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/html5.svg')" id="lanHtml5"></div>
                             <div class="lanName">HTML5 &amp; CSS3</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/jquery.svg')" id="lanJquery"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/jquery.svg')" id="lanJquery"></div>
                             <div class="lanName">Jquery &amp; DOM</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/angular-js.svg')" id="lanAngular"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/angular-js.svg')" id="lanAngular"></div>
                             <div class="lanName">Angular JS</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/react.svg')" id="lanReact"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/react.svg')" id="lanReact"></div>
                             <div class="lanName">React/Redux</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/laravel.svg')" id="lanLaravel"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/laravel.svg')" id="lanLaravel"></div>
                             <div class="lanName">Laravel</div>
                         </div>
 
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/responsive-layout.svg')" id="lanReasponsive"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/responsive-layout.svg')" id="lanReasponsive"></div>
                             <div class="lanName">Responsive Design</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/Database-Cloud.svg')" id="lanDatabase"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/Database-Cloud.svg')" id="lanDatabase"></div>
                             <div class="lanName">MySQL &amp; Database</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/package.svg')" id="lanPackage"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/package.svg')" id="lanPackage"></div>
                             <div class="lanName">NPM &amp; Webpack</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/node.svg')" id="lanNodejs"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/node.svg')" id="lanNodejs"></div>
                             <div class="lanName">Node Js</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/github.svg')" id="lanGithub"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/github.svg')" id="lanGithub"></div>
                             <div class="lanName">Git &amp; Github</div>
                         </div>
 
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/boostrap.svg')" id="lanBoostarap"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/boostrap.svg')" id="lanBoostarap"></div>
                             <div class="lanName">Boostrap &amp; Materilize</div>
                         </div>
 
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/python.svg')" id="lanPython"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/python.svg')" id="lanPython"></div>
                             <div class="lanName">Python</div>
                         </div>
                     </div>
@@ -182,11 +200,11 @@
                     <h4 class="subSectionHead">Mobile Dev</h4>
                     <div class="lanContainRow">
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/react.svg')" id="lanReactNative"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/react.svg')" id="lanReactNative"></div>
                             <div class="lanName">React Native</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/android.svg')" id="lanAndroid"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/android.svg')" id="lanAndroid"></div>
                             <div class="lanName">Android</div>
                         </div>
                     </div>
@@ -195,21 +213,21 @@
                     <h4 class="subSectionHead">Dev Ops &amp; Tools</h4>
                     <div class="lanContainRow">
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/ps.svg')" id="lanPhotoshop"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/ps.svg')" id="lanPhotoshop"></div>
                             <div class="lanName">Photoshop</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/ai.svg')" id="lanIllustrator"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/ai.svg')" id="lanIllustrator"></div>
                             <div class="lanName">Illustrator</div>
                         </div>
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/linux.svg')" id="lanLinux"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/linux.svg')" id="lanLinux"></div>
                             <div class="lanName">Linux</div>
                         </div>
 
 
                         <div class="lanBox">
-                            <div class="progress" style="background-image: url('./img/skills/docker.svg')" id="lanDocker"></div>
+                            <div class="progressContain" style="background-image: url('./img/skills/docker.svg')" id="lanDocker"></div>
                             <div class="lanName">Docker &amp; Deployment</div>
                         </div>
                     </div>
@@ -232,60 +250,57 @@
                 <h1>Achievements &amp; Education</h1>
                 <div class="subSection">
                     <h4 class="subSectionHead">Achievements</h4>
-                    <div class="listContain">
-                        <div class="listItem">
-                            <h4>IMAD toper in NPTEL Exam</h4>
-                            <div class="date">2017</div>
-                            <div class="discConatin">
-                                IMAD is course in NPTEL. Iam one of the toper in the final exam in All india Level
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="listItem">
+                                <h4>IMAD toper in NPTEL Exam</h4>
+                                <div class="date">2017</div>
+                                <div class="discConatin">
+                                    IMAD is course in NPTEL. Iam one of the toper in the final exam in All india Level
+                                </div>
                             </div>
                         </div>
 
-                        <div class="listItem">
-                            <h4>OOAD Enlite NPTEL Exam</h4>
-                            <div class="date">2017</div>
-                            <div class="discConatin">
-                                OOAD is course in NPTEL. Got an Enlite certificate in all india level
+                        <div class="col-md-12">
+                            <div class="listItem">
+                                <h4>OOAD Elite NPTEL Exam</h4>
+                                <div class="date">2017</div>
+                                <div class="discConatin">
+                                    OOAD is course in NPTEL. Got an Elite certificate in all india level
+                                </div>
                             </div>
                         </div>
 
-                        <div class="listItem">
-                            <h4>HPDF high-performer</h4>
-                            <div class="date">2017</div>
-                            <div class="discConatin">
-                                HPDF is a online internship conducted by Cloud Provider Hasura. For successfully completing and helping others received a
-                                high-performer certificate
+                        <div class="col-md-12">
+                            <div class="listItem">
+                                <h4>HPDF high-performer</h4>
+                                <div class="date">2017</div>
+                                <div class="discConatin">
+                                    HPDF is an online internship conducted by Cloud Provider Hasura. For successfully completing and helping others received
+                                    a high-performer certificate
+                                </div>
                             </div>
                         </div>
 
-                        <div class="listItem">
-                            <h4>In SIH 2017 team Got selected into Top 10</h4>
-                            <div class="date">2016</div>
-                            <div class="discConatin">
-                                Smart India Hakathown (SIH) is conducted by ministorys of India. For creating a Solution for DDF we got selected into top
-                                10
+                        <div class="col-md-12">
+                            <div class="listItem">
+                                <h4>In SIH 2017 team Got selected into Top 10</h4>
+                                <div class="date">2016</div>
+                                <div class="discConatin">
+                                    Smart India Hakathown (SIH) is conducted by ministry of India. For creating a Solution for DDF we got selected into top 10
+                                </div>
                             </div>
                         </div>
-                        <div class="listItem">
-                            <h4>In SIH 2018 team Got special Mention</h4>
-                            <div class="date">2016</div>
-                            <div class="discConatin">
-                                For creating a Solution for MMC we got special mention
+                        <div class="col-md-12">
+                            <div class="listItem">
+                                <h4>In SIH 2018 team Got special Mention</h4>
+                                <div class="date">2016</div>
+                                <div class="discConatin">
+                                    For creating a Solution for MMC we got special mention
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section id="personal" class="four">
-                <h1>Personal</h1>
-                <div class="subSection">
-                    <h4 class="subSectionHead">
-                        Intro
-                    </h4>
-                    <p class="IntroContain">
-                        Iam Amal Chandran love to talk in the language of computers. Enthusiastic about technology and its progress. Moving with
-                        the open source. Persueing B.Tech CSE in CEP. I have also got some people to power me up form CEP.
-                    </p>
                 </div>
             </section>
         </div>
@@ -324,7 +339,7 @@
         CreateProgress("#lanIllustrator", .5);
         CreateProgress("#lanBoostarap", .8);
         CreateProgress("#lanLinux", .7);
-        CreateProgress("#lanPython", .6);
+        CreateProgress("#lanPython", .4);
         CreateProgress("#lanDocker", .4);
 
         // new ProgressBar.Circle("#progress2", {

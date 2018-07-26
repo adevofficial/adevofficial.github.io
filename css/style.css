@@ -19,7 +19,7 @@ a:visited {
     color: #000;
 }
 
-.container {
+.container-nonstarp {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -29,28 +29,34 @@ a:visited {
 .side-right {
     /* background: #ffeb3b; */
     padding: 2rem;
+    height: 100vh;
 }
 
 .side-left {
-    min-height: 100vh;
     font-size: 2rem;
     width: 40%;
-    /* border: 1px solid #ead839; */
 }
 
 .side-right {
-    height: 100vh;
     width: 100%;
     padding: 0px;
+    background: white;
     overflow-y: scroll;
     overflow-x: hidden;
-    background: white;
+}
+
+.side-left h1 {
+    font-weight: bold;
+    font-size: 4rem;
 }
 
 .work-on {
     text-transform: uppercase;
     color: #00000078;
     font-size: 2rem;
+    line-height: 1;
+    padding: 22px 0px;
+    padding-bottom: 26px;
 }
 
 .shortnote {
@@ -58,15 +64,21 @@ a:visited {
     font-weight: 100;
 }
 
-.side-right>section,
-.side-right>section.one {
+.side-right>section {
+    background: url(./../img/background.jpg);
+    background-position: center;
+    background-size: cover;
     min-height: 100vh;
-    background: #F0B67F;
     border-bottom-width: 2px;
 }
 
+.side-right>section.one {
+    background: #8BC34A;
+}
+
 .side-right>section.two {
-    background: #8dbd56;
+    background: #FFB74D;
+    padding-bottom: 1rem;
 }
 
 .shortnote a {
@@ -133,10 +145,10 @@ section h1 {
 }
 
 .side-right>section.three {
-    background-color: #607d8b;
+    background: #009688;
 }
 
-.progress {
+.progressContain {
     margin: 10px;
     width: 55px;
     min-width: 55px;
@@ -166,16 +178,16 @@ section h1 {
 }
 
 .projectBox {
-    border-radius: 6px;
+    /* border-radius: 6px;
     margin: 1rem;
     position: relative;
-    flex-basis: 10rem;
+    flex-basis: 10rem; */
 }
 
 .projectImg {
     background: rgb(212, 177, 79);
     width: 100%;
-    min-width: 200px;
+    /* min-width: 200px; */
     height: 200px;
     background-size: cover;
     background-position: center;
@@ -189,6 +201,7 @@ section h1 {
 
 .projectBox .details h2 {
     font-size: .8rem;
+    font-weight: bold;
 }
 
 .subSection {
@@ -208,33 +221,27 @@ section h1 {
 }
 
 .listItem {
-    flex-basis: 20rem;
     background: #fff;
-    margin: 1rem;
     padding: 1rem;
-    border-bottom: 2px solid #1887bd;
     border-radius: 3px;
+    margin-bottom: 13px;
 }
 
 .listItem h4 {
     margin: 0px;
-    padding-bottom: 4px
+    padding-bottom: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
 }
 
 .listItem .date {
-    padding-bottom: .4rem;
-    color: gray;
+    padding: 2.2px 10.5px;
+    color: #585353;
+    display: inline-block;
+    background: #b7b4b4;
+    border-radius: 27px;
 }
-
-/* section:first-child {
-    background: transparent;
-}
-
-body {
-    background: url('./img/background.jpg');
-    background-position: center;
-    background-size: cover;
-} */
 
 .IntroContain {
     /* padding: 0px 2rem; */
@@ -249,14 +256,26 @@ section.four {
 }
 
 @media (max-width:500px) {
-    .container {
+    .container-nonstarp {
         flex-direction: column;
     }
     .side-left {
         width: 100%;
+        overflow: auto;
     }
     .side-right {
         overflow: auto;
         height: auto;
     }
+}
+
+@media(max-width:768px) {
+    .side-left {
+        overflow: unset;
+    }
+}
+
+.row-margin {
+    margin-right: 15px;
+    margin-left: 15px;
 }
