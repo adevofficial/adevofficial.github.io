@@ -1,0 +1,286 @@
+// Custom.scss
+$body-bg: #000;
+$body-color: #fff;
+$theme-colors: (
+  "primary": #05c0e0
+);
+
+// Option A: Include all of Bootstrap
+
+@import "./../node_modules/bootstrap/scss/bootstrap";
+
+$body-tag-margin: 1rem;
+$tag-color: rgb(100, 100, 100);
+
+.body-tags::before {
+  content: "<body>";
+}
+
+.body-tags::after {
+  content: "</body>";
+}
+
+.body-tags::before,
+.body-tags::after {
+  margin-left: -$body-tag-margin;
+
+  color: $tag-color;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.section-tags::after,
+.section-tags::before {
+  margin-left: -$body-tag-margin;
+
+  color: $tag-color;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.section-tags::before {
+  content: "<section>";
+}
+
+.section-tags::after {
+  content: "</section>";
+}
+
+.body-tags {
+  padding-left: $body-tag-margin;
+}
+.section-tags {
+  padding-left: $body-tag-margin;
+}
+
+.add-tags::before {
+  content: "<";
+  margin: -14px;
+  color: #60b5ff;
+}
+
+.add-tags::after {
+  content: "/>";
+  margin: -7px;
+  color: #60b5ff;
+  letter-spacing: -9px;
+}
+
+html,
+body {
+  background: #000;
+  color: #fff;
+  font-family: Roboto Condensed, Lato, Arial, sans-serif !important;
+}
+
+section:first-child {
+  padding-left: 0rem;
+}
+
+section {
+  padding-top: 75px;
+  min-height: 100vh;
+  padding: 2rem;
+  padding-left: 20rem;
+}
+
+.section-wrapper {
+  background: rgb(17, 17, 17);
+}
+
+h1,
+.h1 {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+h2,
+.h2 {
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+.gallery {
+  padding-top: 2rem;
+}
+.gallery .gallery-image {
+  height: 300px;
+  // border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  transition: opacity 1s ease-in;
+}
+
+.gallery .gallery-image:hover {
+  opacity: 1;
+}
+.gallery .gallery-image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // background: linear-gradient(65deg, rgba(16, 9, 27, 0.8), transparent 50%);
+}
+
+.gallery .gallery-details {
+  padding: 2rem;
+}
+
+.gallery .row > div {
+  margin-bottom: 5rem;
+}
+.hv-100 {
+  min-height: 80vh;
+}
+
+.hv-80 {
+  min-height: 80vh;
+}
+// @import url('https://fonts.googleapis.com/css?family=Raleway:400', '500', '700');
+// @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.snip1477 {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  background-color: #000000;
+}
+.snip1477 *,
+.snip1477 *:before,
+.snip1477 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.55s ease;
+  transition: all 0.55s ease;
+}
+.snip1477 img {
+  height: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  opacity: 0.9;
+  object-fit: cover;
+}
+.snip1477 .title {
+  position: absolute;
+  top: 58%;
+  left: 25px;
+  padding: 5px 10px 10px;
+}
+.snip1477 .title:before,
+.snip1477 .title:after {
+  height: 2px;
+  width: 400px;
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+}
+.snip1477 .title:before {
+  top: 0;
+  left: 10px;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.snip1477 .title:after {
+  bottom: 0;
+  right: 10px;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.snip1477 .title div:before,
+.snip1477 .title div:after {
+  width: 2px;
+  height: 300px;
+  position: absolute;
+  content: "";
+  background-color: #ffffff;
+}
+.snip1477 .title div:before {
+  top: 10px;
+  right: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.snip1477 .title div:after {
+  bottom: 10px;
+  left: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.snip1477 h2,
+.snip1477 h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.snip1477 h2 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.snip1477 h4 {
+  font-size: 1rem;
+
+  display: block;
+  font-weight: 700;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  color: #000000;
+}
+.snip1477 figcaption {
+  position: absolute;
+  bottom: 42%;
+  left: 25px;
+  text-align: left;
+  opacity: 0;
+  padding: 5px 60px 5px 10px;
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.snip1477 figcaption p {
+  margin: 0;
+}
+.snip1477 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.snip1477:hover img,
+.snip1477.hover img {
+  zoom: 1;
+  filter: alpha(opacity=35);
+  -webkit-opacity: 0.35;
+  opacity: 0.35;
+}
+.snip1477:hover .title:before,
+.snip1477.hover .title:before,
+.snip1477:hover .title:after,
+.snip1477.hover .title:after,
+.snip1477:hover .title div:before,
+.snip1477.hover .title div:before,
+.snip1477:hover .title div:after,
+.snip1477.hover .title div:after {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.snip1477:hover .title:before,
+.snip1477.hover .title:before,
+.snip1477:hover .title:after,
+.snip1477.hover .title:after {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.snip1477:hover figcaption,
+.snip1477.hover figcaption {
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
