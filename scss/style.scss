@@ -12,45 +12,105 @@ $theme-colors: (
 $body-tag-margin: 1rem;
 $tag-color: rgb(100, 100, 100);
 
-.body-tags::before {
-  content: "<body>";
+$tags: "body" "body", "section" "section", "row" "row", "h1" "h1", "h2" "h2",
+  "span" "span";
+
+@each $i in $tags {
+  .#{nth($i, 1)}-tags {
+    &::before {
+      content: "<" + nth($i, 2) + ">";
+    }
+
+    &::after {
+      content: "<" + nth($i, 2) + "/>";
+    }
+
+    &::before,
+    &::after {
+      margin-left: -$body-tag-margin;
+
+      color: $tag-color;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: normal;
+    }
+    padding-left: $body-tag-margin;
+  }
 }
 
-.body-tags::after {
-  content: "</body>";
+.removeAfter::after {
+  content: none;
 }
 
-.body-tags::before,
-.body-tags::after {
-  margin-left: -$body-tag-margin;
-
-  color: $tag-color;
-  font-size: 1.2rem;
-  font-style: italic;
+.inlineTag {
+  &::after,
+  &::before {
+    vertical-align: middle;
+  }
+  &::after {
+    padding-left: 1rem;
+  }
 }
 
-.section-tags::after,
-.section-tags::before {
-  margin-left: -$body-tag-margin;
+// .body-tags {
+//   &::before {
+//     content: "<body>";
+//   }
 
-  color: $tag-color;
-  font-size: 1.2rem;
-  font-style: italic;
-}
-.section-tags::before {
-  content: "<section>";
-}
+//   &::after {
+//     content: "</body>";
+//   }
 
-.section-tags::after {
-  content: "</section>";
-}
+//   &::before,
+//   &::after {
+//     margin-left: -$body-tag-margin;
 
-.body-tags {
-  padding-left: $body-tag-margin;
-}
-.section-tags {
-  padding-left: $body-tag-margin;
-}
+//     color: $tag-color;
+//     font-size: 1.2rem;
+//     font-style: italic;
+//   }
+//   padding-left: $body-tag-margin;
+// }
+
+// .section-tags {
+//   padding-left: $body-tag-margin;
+
+//   &::after,
+//   &::before {
+//     margin-left: -$body-tag-margin;
+//     color: $tag-color;
+//     font-size: 1.2rem;
+//     font-style: italic;
+//   }
+
+//   &::before {
+//     content: "<section>";
+//   }
+
+//   &::after {
+//     content: "</section>";
+//   }
+// }
+
+// .row-tags {
+//   padding-left: $body-tag-margin;
+
+//   &::after,
+//   &::before {
+//     margin-left: -$body-tag-margin;
+//     color: $tag-color;
+//     font-size: 1.2rem;
+//     font-style: italic;
+//   }
+
+//   &::before {
+//     content: "<row>";
+//   }
+
+//   &::after {
+//     content: "</row>";
+//   }
+// }
 
 .add-tags::before {
   content: "<";
@@ -111,7 +171,8 @@ h2,
   transition: opacity 1s ease-in;
 }
 
-.gallery .gallery-image:hover {
+.gallery .gallery-image:hover,
+.gallery-image.active {
   opacity: 1;
 }
 .gallery .gallery-image::before {
@@ -125,12 +186,74 @@ h2,
 }
 
 .gallery .gallery-details {
+  .desc-text {
+    transition: all 1s linear;
+    display: inline;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 5px;
+    background: linear-gradient(
+      to right,
+      rgba(0, 209, 177, 1) 0%,
+      rgba(39, 143, 198, 1) 98%
+    );
+    background-size: 0px 2px;
+    background-repeat: no-repeat;
+    background-position: left 85%;
+    text-shadow: 0;
+  }
+
+  &:hover,
+  &.active {
+    .desc-text {
+      background-size: 100% 2px;
+      text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.5);
+    }
+    h3 {
+      // font: 700 4em/1 "Oswald", sans-serif;
+      // letter-spacing: 0;
+      // padding: 0.25em 0 0.325em;
+      display: block;
+      // margin: 0 auto;
+      text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+      /* Clip Background Image */
+
+      background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png)
+        repeat-y;
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      /* Animate Background Image */
+
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: aitf 50s linear infinite;
+
+      /* Activate hardware acceleration for smoother animations */
+
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+    }
+  }
+}
+
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.gallery .gallery-details {
   padding: 2rem;
 }
 
 .gallery .row > div {
   margin-bottom: 5rem;
 }
+
 .hv-100 {
   min-height: 80vh;
 }
