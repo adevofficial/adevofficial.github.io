@@ -332,7 +332,7 @@
 
         <section class="container">
             <div class="section-tags">
-                <h1 class="add-tags">
+                <h1 data-aos="zoom-in-right" class="add-tags">
                     About
                 </h1>
                 <div class="row">
@@ -372,7 +372,7 @@
                         </div>
 
                     </div>
-                    <div class="col">
+                    <div data-aos="fade-up-left" class="col">
                         <div id="timeline" style="height: 100%; " class="d-flex flex-column">
                             <div class="d-flex">
                                 <h3>Timeline</h3>
@@ -409,10 +409,41 @@
 
         <section class="container">
             <div class="section-tags">
-                <h1 class="add-tags">
+                <h1 data-aos="fade-up-right" class="add-tags mb-4">
                     Skills
                 </h1>
+                <div data-aos="fade-up" id="periodic_table" class="periodic-table">
+                    <div class="empty-spacer-1"></div>
+                    <div class="empty-spacer-2"></div>
 
+                    <div v-for="elements_data in periodic_table_data" class="periodic-element "
+                        v-bind:class="elements_data.type" v-bind:data-description="elements_data.hover_text">
+                        <div class="periodic-element-inner">
+                            <div class="title">{{elements_data.title}}</div>
+                            <div class="description">{{elements_data.description}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="legend-table">
+                    <div class="legend-table__wrapper">
+
+                        <span class="legend-table__marker type-1"></span>
+                        <span class="legend-table__text">Web</span>
+                        <span class="legend-table__marker type-2"></span>
+                        <span class="legend-table__text">Data Science & ML</span>
+                        <span class="legend-table__marker type-3"></span>
+                        <span class="legend-table__text">Mobile</span>
+                        <span class="legend-table__marker type-4"></span>
+                        <span class="legend-table__text">Tools</span>
+
+                        <br />
+                        <div class="legend-table__direction"><span>&#8594; &ensp; Across the table: Importance</span>
+                        </div>
+                        <div class="legend-table__direction"><span>&#8595; &ensp; Down the table: Least Time
+                                Spent</span>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -439,6 +470,200 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var periodic_table_data = [
+            {
+                title: "Js",
+                description: "JavaScript",
+                hover_text: "The best loving lagnuage",
+                type: ["type-1"],
+            },
+            {
+                title: "Py",
+                description: "Python",
+                hover_text: "The advanced programing companion",
+                type: ["type-2"],
+            },
+            {
+                title: "Ph",
+                description: "PHP",
+                hover_text: "The simple and easy problem solver companion.",
+                type: ["type-1"],
+            },
+            {
+                title: "Ht",
+                description: "HTML",
+                hover_text: "The ui structuring",
+                type: ["type-1"],
+            },
+            {
+                title: "Cs",
+                description: "CSS",
+                hover_text: "The ui styling & beautifying",
+                type: ["type-1"],
+            },
+            {
+                title: "Ra",
+                description: "React",
+                hover_text: "The most used ui framework",
+                type: ["type-1"],
+            },
+            {
+                title: "Ag",
+                description: "Angular 2",
+                hover_text: "The 2nd most used ui framework",
+                type: ["type-1"],
+            },
+            {
+                title: "Nd",
+                description: "Node.Js",
+                hover_text: "The most used backend runtime",
+                type: ["type-1"],
+            },
+            {
+                title: "Lv",
+                description: "Laravel",
+                hover_text: "The most used backend framework",
+                type: ["type-1"],
+            },
+            {
+                title: "Dj",
+                description: "Django",
+                hover_text: "The python web companion",
+                type: ["type-1"],
+            },
+            {
+                title: "Re",
+                description: "REST",
+                hover_text: "The data sharing method",
+                type: ["type-1"],
+            },
+            {
+                title: "Gq",
+                description: "Graph QL",
+                hover_text: "The loved more than rest",
+                type: ["type-1"],
+            },
+            {
+                title: "Np",
+                description: "Numpy",
+                hover_text: "Still learing the math",
+                type: ["type-2"],
+            },
+            {
+                title: "My",
+                description: "MySql",
+                hover_text: "The most used backend database",
+                type: ["type-1"],
+            },
+            {
+                title: "Pg",
+                description: "Postgres",
+                hover_text: "The most loved backend database",
+                type: ["type-1"],
+            },
+            {
+                title: "Mo",
+                description: "Mongo DB",
+                hover_text: "The most loved no-sql backend database",
+                type: ["type-1"],
+            },
+            {
+                title: "Gi",
+                description: "Git",
+                hover_text: "The most loved version control system",
+                type: ["type-4"],
+            },
+            {
+                title: "Gb",
+                description: "Github",
+                hover_text: "The most loved service provider",
+                type: ["type-4"],
+            },
+            {
+                title: "Bo",
+                description: "Bootstrap",
+                hover_text: "The most familiar css framework",
+                type: ["type-1"],
+            },
+            {
+                title: "Ma",
+                description: "Materilize",
+                hover_text: "The react css framework",
+                type: ["type-1"],
+            },
+            {
+                title: "Rn",
+                description: "React Native",
+                hover_text: "The best known mobile platform",
+                type: ["type-3"],
+            },
+            {
+                title: "An",
+                description: "Android",
+                hover_text: "The best familiar mobile platform",
+                type: ["type-3"],
+            },
+            {
+                title: "Ps",
+                description: "Photoshop",
+                hover_text: "The best design tool",
+                type: ["type-4"],
+            },
+            {
+                title: "Ai",
+                description: "Illustrator",
+                hover_text: "The best vector design tool",
+                type: ["type-4"],
+            },
+            {
+                title: "Xd",
+                description: "Adobe XD",
+                hover_text: "The best ui design tool",
+                type: ["type-4"],
+            },
+            {
+                title: "Li",
+                description: "Linux",
+                hover_text: "The most familiary desktop platform",
+                type: ["type-4"],
+            },
+            {
+                title: "Do",
+                description: "Docker",
+                hover_text: "The most used deployment companion",
+                type: ["type-4"],
+            },
+            {
+                title: "Np",
+                description: "Npm",
+                hover_text: "The most used package manager",
+                type: ["type-4"],
+            },
+            {
+                title: "Wp",
+                description: "Webpack",
+                hover_text: "The most used package bundiler",
+                type: ["type-4"]
+            },
+        ];
+
+        periodic_table_data = periodic_table_data.map(function (elements_data) {
+            elements_data.type.push("animate-timing-" + getRandomInt(1, 4))
+            return elements_data;
+        });
+
+        new Vue({
+            el: "#periodic_table",
+            data: {
+                periodic_table_data: periodic_table_data
+            }
+        });
         new Vue({
             el: '#timeline',
             data: function () {
