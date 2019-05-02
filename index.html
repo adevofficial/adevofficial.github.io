@@ -44,6 +44,7 @@
     </nav> -->
 
     <main>
+
         <section class="container">
             <div style="height: 100%;" class="section-tags ">
                 <div class="hv-80 flex-column d-flex align-items-center justify-content-center">
@@ -96,6 +97,7 @@
                 <!-- </div> -->
             </div>
         </section>
+
         <div class="section-wrapper">
 
             <section class="container">
@@ -406,47 +408,82 @@
                 </div>
             </div>
         </section>
+        <div class="section-wrapper">
 
-        <section class="container">
-            <div class="section-tags">
-                <h1 data-aos="fade-up-right" class="add-tags mb-4">
-                    Skills
-                </h1>
-                <div data-aos="fade-up" id="periodic_table" class="periodic-table">
-                    <div class="empty-spacer-1"></div>
-                    <div class="empty-spacer-2"></div>
+            <section class="container">
+                <div class="section-tags">
+                    <h1 data-aos="fade-up-right" class="add-tags mb-4">
+                        Skills
+                    </h1>
+                    <div data-aos="fade-up" id="periodic_table" class="periodic-table">
+                        <div class="empty-spacer-1"></div>
+                        <div class="empty-spacer-2"></div>
 
-                    <div v-for="elements_data in periodic_table_data" class="periodic-element "
-                        v-bind:class="elements_data.type" v-bind:data-description="elements_data.hover_text">
-                        <div class="periodic-element-inner">
-                            <div class="title">{{elements_data.title}}</div>
-                            <div class="description">{{elements_data.description}}</div>
+                        <div v-for="elements_data in periodic_table_data" class="periodic-element "
+                            v-bind:class="elements_data.type" v-bind:data-description="elements_data.hover_text">
+                            <div class="periodic-element-inner">
+                                <div class="title">{{elements_data.title}}</div>
+                                <div class="description">{{elements_data.description}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="legend-table">
+                        <div class="legend-table__wrapper">
+
+                            <span class="legend-table__marker type-1"></span>
+                            <span class="legend-table__text">Web</span>
+                            <span class="legend-table__marker type-2"></span>
+                            <span class="legend-table__text">Data Science & ML</span>
+                            <span class="legend-table__marker type-3"></span>
+                            <span class="legend-table__text">Mobile</span>
+                            <span class="legend-table__marker type-4"></span>
+                            <span class="legend-table__text">Tools</span>
+
+                            <br />
+                            <div class="legend-table__direction"><span>&#8594; &ensp; Across the table:
+                                    Importance</span>
+                            </div>
+                            <div class="legend-table__direction"><span>&#8595; &ensp; Down the table: Least Time
+                                    Spent</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-up" class="legend-table">
-                    <div class="legend-table__wrapper">
+            </section>
 
-                        <span class="legend-table__marker type-1"></span>
-                        <span class="legend-table__text">Web</span>
-                        <span class="legend-table__marker type-2"></span>
-                        <span class="legend-table__text">Data Science & ML</span>
-                        <span class="legend-table__marker type-3"></span>
-                        <span class="legend-table__text">Mobile</span>
-                        <span class="legend-table__marker type-4"></span>
-                        <span class="legend-table__text">Tools</span>
+        </div>
+        <div class="section-wrapper contact-bg">
+            <section class="container">
+                <div class="section-tags">
+                    <h1 data-aos="fade-up-right" class="add-tags mb-4">
+                        Contact
+                    </h1>
+                    <div class="row-tags mt-5 pb-5">
+                        <div class="row flex-column  " style="font-size:2rem;">
+                            <div class="col ">
+                                <i class="fas fa-at fa-lg  text-primary"></i>
+                                amalchandrandev
+                            </div>
+                            <div class="col mt-5">
+                                <i class="fab fa-github fa-lg  text-primary"></i>
+                                /adevofficial
+                            </div>
+                            <div class="col mt-5">
+                                <i class="fab fa-twitter fa-lg text-primary"></i>
+                                /amalchandrandev
+                            </div>
+                            <div class="col mt-5">
+                                <i class="fas fa-mobile fa-lg  text-primary"></i>
+                                +91-8113993984
+                            </div>
+                            <div class="col">
 
-                        <br />
-                        <div class="legend-table__direction"><span>&#8594; &ensp; Across the table: Importance</span>
-                        </div>
-                        <div class="legend-table__direction"><span>&#8595; &ensp; Down the table: Least Time
-                                Spent</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
-            </div>
+        </div>
         </section>
 
     </main>
