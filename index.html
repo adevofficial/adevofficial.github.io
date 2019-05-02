@@ -12,10 +12,16 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.7.0/css/OverlayScrollbars.min.css">
+
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <!-- <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="#">&lt;<b>
                 ADev
             </b>\&gt;</a>
@@ -40,23 +46,29 @@
     <main>
         <section class="container">
             <div style="height: 100%;" class="section-tags ">
-                <div class="hv-80 d-flex align-items-center">
-                    <div>
-
+                <div class="hv-80 flex-column d-flex align-items-center justify-content-center">
+                    <div style="width:890px;" data-aos="fade-up" data-aos-delay="150"
+                        data-aos-anchor-placement="top-center">
                         <!-- <div class="section-tags"> -->
+
                         <div class="h1-tags removeAfter">
                             <h1>
                                 Hey,
                             </h1>
                         </div>
-                        <div class="h1-tags removeAfter">
+                        <div class="h1-tags my-name removeAfter">
                             <h1>
                                 <span class="h2">
                                     My name is
                                 </span>
-                                <span class="text-primary span-tags inlineTag removeAfter text-weight-bold">
+                                <span id="adev-name-2" class="text-primary text-weight-bold">ADev
+                                    <!-- <i class="em em-sunglasses"></i> -->
+                                    😎
+                                </span>
+                                <span id="adev-name-1" class="text-primary text-weight-bold">
                                     Amal Chandran
                                 </span>
+
                             </h1>
                         </div>
                         <div class="h2-tags removeAfter">
@@ -70,10 +82,12 @@
                                 <span class="font-weight-bold">
                                     develop
                                 </span>
-
-                                web apps
-
+                                <span id="app-type"></span>
                             </h2>
+                            <div>
+
+
+                            </div>
                         </div>
 
                     </div>
@@ -85,7 +99,7 @@
         <div class="section-wrapper">
 
             <section class="container">
-                <div class="section-tags">
+                <div class="section-tags" data-aos="zoom-in">
                     <h1 class="add-tags">
                         Work
                     </h1>
@@ -94,11 +108,11 @@
                         <div class="gallery">
 
                             <div class="row  justify-content-between">
-                                <div data-tilt data-details="details-1"
+                                <div data-tilt data-aos="fade-up-right" data-details="details-1"
                                     style="background-image: url('./img//projectImg/twitterClone.png');"
-                                    class="gallery-image col-4">
+                                    class="gallery-image col-4 infinite pulse delay-2s">
                                 </div>
-                                <div id="details-1" style="background-color: transparent;"
+                                <div id="details-1" data-aos="fade-up" style="background-color: transparent;"
                                     class="col-4 gallery-details">
                                     <h3 class="font-weight-bold text-underline">Twitter App</h3>
                                     <h6>
@@ -126,12 +140,12 @@
                                     </p>
                                     &leftarrow;
                                 </div>
-                                <div data-tilt data-details="details-2"
+                                <div data-tilt data-aos="fade-up-left" data-details="details-2"
                                     style="background-image: url('./img//projectImg/iplbox.png')"
-                                    class="gallery-image col-4">
+                                    class="gallery-image col-4 infinite pulse delay-2s">
                                 </div>
 
-                                <div id="details-3" style="background-color: transparent;"
+                                <div id="details-3" data-aos="fade-down-right" style="background-color: transparent;"
                                     class="col-4 gallery-details">
                                     <h3 class="font-weight-bold text-underline">Swiggy App</h3>
                                     <h6>
@@ -160,12 +174,12 @@
                                 </div>
 
 
-                                <div data-details="details-3" data-tilt
+                                <div data-details="details-3" data-aos="fade-down" data-tilt
                                     style="background-image: url('./img//projectImg/swiggy.png');"
-                                    class="gallery-image col-4">
+                                    class="gallery-image col-4 infinite pulse delay-2s">
                                 </div>
 
-                                <div id="details-2" style="background-color: transparent;"
+                                <div id="details-2" data-aos="fade-down-left" style="background-color: transparent;"
                                     class="col-4 gallery-details">
                                     <h3 class="font-weight-bold text-underline">IPL Box App</h3>
                                     <h6>
@@ -202,11 +216,11 @@
                                 </div>
 
 
-                                <div data-details="details-4" data-tilt
+                                <div data-details="details-4" data-aos="fade-down-right" data-tilt
                                     style="background-image: url('./img//projectImg/shopping-app.jpg');"
-                                    class="gallery-image col-4">
+                                    class="gallery-image col-4 infinite pulse delay-2s">
                                 </div>
-                                <div id="details-6" style="background-color: transparent;"
+                                <div id="details-6" data-aos="fade-down" style="background-color: transparent;"
                                     class="col-4 gallery-details">
                                     <h3 class="font-weight-bold text-underline">Konik Tech Site</h3>
                                     <h6>
@@ -233,13 +247,13 @@
                                     </p>
                                     &downarrow;
                                 </div>
-                                <div data-tilt data-details="details-5"
+                                <div data-tilt data-aos="fade-down-left" data-details="details-5"
                                     style="background-image: url('./img//projectImg/sporta.png')"
-                                    class="gallery-image col-4">
+                                    class="gallery-image col-4 infinite pulse delay-2s">
                                 </div>
 
 
-                                <div id="details-4" style="background-color: transparent;"
+                                <div id="details-4" data-aos="fade-up-right" style="background-color: transparent;"
                                     class="col-4 gallery-details">
                                     <h3 class="font-weight-bold text-underline">Shopping App</h3>
                                     <h6>
@@ -270,12 +284,12 @@
                                 </div>
 
 
-                                <div data-tilt data-details="details-6"
+                                <div data-tilt data-aos="fade-up" data-details="details-6"
                                     style="background-image: url('./img//projectImg/konik-tech.png');"
-                                    class="gallery-image col-4">
+                                    class="gallery-image col-4 infinite pulse delay-2s">
                                 </div>
 
-                                <div id="details-5" style="background-color: transparent;"
+                                <div id="details-5" data-aos="fade-up-left" style="background-color: transparent;"
                                     class="col-4 gallery-details">
                                     <h3 class="font-weight-bold text-underline">Sporta App</h3>
                                     <h6>
@@ -321,6 +335,86 @@
                 <h1 class="add-tags">
                     About
                 </h1>
+                <div class="row">
+                    <div style="font-size: 1.5rem;font-weight: 100;" class="col">
+                        <div class="p-tags removeAfter" data-aos="fade-up">
+                            <p>
+                                The <span class="text-success font-weight-bold">
+
+                                    passion
+                                </span>
+                                is the behind the screen runner.
+                                The first time met computer as friend of mine.
+                                Like every other friendship's beginig we are also exchanged the love while playing.
+                            </p>
+                        </div>
+                        <div class="p-tags removeAfter" data-aos="fade-up">
+
+                            <p>
+                                When start to talking with
+
+                                <span class="code-font-family font-weight-bold text-primary">"Hello World"</span>. I
+                                started getting familer with the language we
+                                both can
+                                talk. Thus our bond gets more stronger. To continue the relationship i joined the
+                                college
+                                with same digree as she.
+                            </p>
+                        </div>
+
+                        <div class="p-tags removeAfter" data-aos="fade-up">
+
+                            <p>
+                                Some of my better colleague and teachers supported this and enrich its bond.
+                                Even though new friends come to my life to share their love. I always like to stick with
+                                her.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div id="timeline" style="height: 100%; " class="d-flex flex-column">
+                            <div class="d-flex">
+                                <h3>Timeline</h3>
+
+                            </div>
+                            <div class="timeline">
+                                <ul>
+                                    <li v-for="(info, index) in timeline_data" v-bind:key="index">
+                                        <span></span>
+                                        <div>{{ info.school }}</div>
+                                        <div>{{ info.address }}</div>
+                                        <div>{{ info.course }}</div>
+                                        <div class="year">
+                                            <span>{{ info.yearEnd }}</span>
+                                            <span>{{ info.yearStart }}</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-auto">
+                                <nav class="nav nav-pills">
+                                    <a v-bind:class="['nav-link',(selected_option == name) ? 'active':'']"
+                                        v-for="(name,index) in option_list" v-bind:key="name"
+                                        v-on:click="selected_option = name">{{name}}</a>
+
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="section-tags">
+                <h1 class="add-tags">
+                    Skills
+                </h1>
+
+
+
             </div>
         </section>
 
@@ -338,7 +432,191 @@
         crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.2/dist/typeit.min.js"></script>
     <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#timeline',
+            data: function () {
+                return {
+                    selected_option: "Education",
+                    option_list: ['Education', 'Experince', 'Achievements', 'Trainings'],
+                    db: {
+                        "Education": [
+                            {
+                                "school": "College Of Engineering Poonjar",
+                                "address": "",
+                                "course": "B.Tech - Computer Science & Engineering",
+                                "yearStart": "2016",
+                                "yearEnd": "2020"
+                            },
+                            {
+                                "school": "SMV HSS Poonjar",
+                                "address": "",
+                                "course": "Senior Secondary - 12th",
+                                "yearStart": "2014",
+                                "yearEnd": "2015"
+                            },
+                            {
+                                "school": "ST Pauls HS Valiyakumaramangalam",
+                                "address": "",
+                                "course": "Higher Secondary - 10th",
+                                "yearStart": "2000",
+                                "yearEnd": "2014"
+                            }
+                        ],
+                        'Experince': [
+                            {
+                                "school": "Web Developer",
+                                "address": "Full Stack Developer",
+                                "course": "@Integrtr - Internship - 2 Month+",
+                                "yearStart": "2018",
+                                "yearEnd": "now"
+                            },
+                            {
+                                "school": "Software Development Intern",
+                                "address": "Frontend Developer",
+                                "course": "@CashPositive - Internship - 2.5 Month",
+                                "yearStart": "2018",
+                                "yearEnd": "2018"
+                            },
+                            {
+                                "school": "Web Development",
+                                "address": "PHP Developer",
+                                "course": "@Srishti Innovative - Internship - 1 Month",
+                                "yearStart": "2018",
+                                "yearEnd": "2018"
+                            },
+                            {
+                                "school": "Software Development Intern",
+                                "address": "Python Developer",
+                                "course": "@Pybotic Labs - Internship - 1 Month",
+                                "yearStart": "2017",
+                                "yearEnd": "2017"
+                            },
+                            {
+                                "school": "Web Development",
+                                "address": "Full Stack Developer",
+                                "course": "@Hasura - Internship - 3 Month",
+                                "yearStart": "2016",
+                                "yearEnd": "2017"
+                            }
+                        ],
+                        'Achievements': [
+                            {
+                                "school": "IMAD Toper - NPTEL Exam",
+                                "address": "Passed with 91%",
+                                "course": "IMAD - NPTEL",
+                                "yearStart": "2017",
+                                "yearEnd": "2017"
+                            },
+                            {
+                                "school": "HPDF High Performer ",
+                                "address": "Awarded For Superior performance",
+                                "course": "HPDF - Internship",
+                                "yearStart": "2018",
+                                "yearEnd": "2017"
+                            },
+                            {
+                                "school": "SIH 2017 Top 10",
+                                "address": "Awarded For Best Solution",
+                                "course": "SIH - Hackathon",
+                                "yearStart": "2017",
+                                "yearEnd": "2017"
+                            },
+                            {
+                                "school": "SIH 2018 Special Mention",
+                                "address": "Awarded For Best Competer",
+                                "course": "SIH - Hackathon",
+                                "yearStart": "2018",
+                                "yearEnd": "2018"
+                            },
+                            {
+                                "school": "SIH 2019 Special Mention",
+                                "address": "Awarded For Best Competer",
+                                "course": "SIH - Hackathon",
+                                "yearStart": "2019",
+                                "yearEnd": "2019"
+                            },
+                            {
+                                "school": "Winner of Junkyard Wars",
+                                "address": "Awarded for Winner",
+                                "course": " Onyx 2K17 - Tech-Fest",
+                                "yearStart": "2017",
+                                "yearEnd": "2017"
+                            },
+                            {
+                                "school": "Winner of Brahma",
+                                "address": "Awarded for Winner",
+                                "course": " Onyx 2K18 - Tech-Fest",
+                                "yearStart": "2018",
+                                "yearEnd": "2018"
+                            },
+                            {
+                                "school": "OOAD Elite - NPTEL Exam",
+                                "address": "Passed with 68%",
+                                "course": "OOAD - NPTEL",
+                                "yearStart": "2017",
+                                "yearEnd": "2017"
+                            }
+                        ],
+                        'Trainings': [
+                            {
+                                "school": "IMAD/NPTEL",
+                                "address": "",
+                                "course": "NPTEL",
+                                "yearStart": "2017",
+                                "yearEnd": "2017"
+                            },
+                            {
+                                "school": "OOAD/NPTEL",
+                                "address": "",
+                                "course": "NPTEL",
+                                "yearStart": "2017",
+                                "yearEnd": "2017"
+                            },
+                            {
+                                "school": "IoT Challange 2016",
+                                "address": "",
+                                "course": "I3indya Technology",
+                                "yearStart": "2017",
+                                "yearEnd": "2017"
+                            },
+                        ]
+                    }
+                }
+            }, computed: {
+                timeline_data: function () {
+                    return this.db[this.selected_option]
+                }
+            }
+        })
+
+        $(document).ready(() => {
+            new TypeIt('#app-type', {
+                strings: ['web app', 'mobile app'],
+                beforeString: (step, queue, instance) => {
+                    // instance.empty();
+                }, loop: true,
+                lifeLike: true,
+                breakLines: false,
+                nextStringDelay: [2000, 100],
+                loopDelay: [100, 2000]
+            }).go();
+            // new TypeIt('#adev-name', { loop: true })
+            //     .empty()
+            //     .type("Amal Chandran")
+            //     .pause(2000)
+            //     .empty()
+            //     .type('ADev')
+            //     .pause(2000)
+            //     .go();
+
+        });
         $(".gallery-image").hover(
             function () {
                 $("#" + $(this).data('details')).addClass("active");
@@ -348,12 +626,13 @@
         );
         $(".gallery-details").hover(
             function () {
-                $(".gallery-image[data-details=" + $(this).attr('id') + "]").addClass("active");
+                $(".gallery-image[data-details=" + $(this).attr('id') + "]").addClass("active").addClass("animated");
             }, function () {
-                $(".gallery-image[data-details=" + $(this).attr('id') + "]").removeClass("active");
+                $(".gallery-image[data-details=" + $(this).attr('id') + "]").removeClass("active").removeClass("animated");
 
             }
         );
+
 
     </script>
 </body>
