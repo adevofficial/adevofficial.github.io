@@ -36,6 +36,16 @@ $tags: "body" "body", "section" "section", "row" "row", "h1" "h1", "h2" "h2",
     }
     padding-left: $body-tag-margin;
   }
+
+  @media (max-width: 470px) {
+    .#{nth($i, 1)}-tags {
+      padding-left: 0px;
+      &::before,
+      &::after {
+        margin-left: -0.5rem;
+      }
+    }
+  }
 }
 
 .removeAfter::after {
@@ -72,8 +82,8 @@ body {
   font-family: Roboto Condensed, Lato, Arial, sans-serif !important;
 }
 
-section:first-child {
-  padding-left: 0rem;
+section#home {
+  padding-top: 0rem;
 }
 
 section {
@@ -452,6 +462,8 @@ a.periodic-element {
   text-align: center;
   font-size: 15px;
   margin: 2em auto 0;
+  display: flex;
+  justify-content: center;
   &__marker {
     width: 25px;
     height: 25px;
@@ -489,4 +501,50 @@ a.periodic-element {
   background-size: 70% auto;
   background-repeat: no-repeat;
   background-position: right;
+}
+
+@media (max-width: 470px) {
+  html,
+  body {
+    font-size: 0.8rem !important;
+  }
+  .home-center-text {
+    width: auto !important;
+  }
+  .gallery .row > div {
+    margin-bottom: auto;
+  }
+
+  .add-tags {
+    font-size: 2.5rem;
+    &::before {
+      margin: -8px;
+    }
+
+    &::after {
+      margin: -5px;
+      letter-spacing: -6px;
+    }
+  }
+  .periodic-table {
+    grid-template-columns: repeat(2, calc(100% / 2));
+    grid-template-rows: repeat(8, 100px);
+    grid-gap: 10px;
+  }
+  .empty-spacer-1,
+  .empty-spacer-2 {
+    display: none;
+  }
+  #timeline nav {
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  .contact-bg {
+    background: none;
+  }
+  .legend-table__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
