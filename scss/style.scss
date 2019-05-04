@@ -163,7 +163,7 @@ h2,
     display: inline;
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-size: 1.2rem;
     padding-bottom: 5px;
     background: linear-gradient(
       to right,
@@ -311,10 +311,6 @@ $light-blue: #4e9bfa;
 }
 .gallery .gallery-details {
   padding: 2rem;
-}
-
-.gallery .row > div {
-  margin-bottom: 5rem;
 }
 
 .hv-100 {
@@ -498,9 +494,14 @@ a.periodic-element {
 
 .contact-bg {
   background: url(./../img/bg-1.jpg);
-  background-size: 70% auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
+}
+
+#app-type {
+  width: 20rem;
+  display: inline-block;
 }
 
 @media (max-width: 470px) {
@@ -526,6 +527,7 @@ a.periodic-element {
       letter-spacing: -6px;
     }
   }
+
   .periodic-table {
     grid-template-columns: repeat(2, calc(100% / 2));
     grid-template-rows: repeat(8, 100px);
@@ -535,6 +537,7 @@ a.periodic-element {
   .empty-spacer-2 {
     display: none;
   }
+
   #timeline nav {
     justify-content: space-between;
     margin-top: 1rem;
@@ -546,5 +549,49 @@ a.periodic-element {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+  section {
+    padding: 1rem;
+    &#home {
+      min-height: calc(100vh - 75px);
+      display: flex;
+      align-items: center;
+      .home-center-head {
+        min-height: auto;
+        .let-me-show {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery .row > div {
+    margin-bottom: 2rem;
+  }
+
+  .periodic-table {
+    grid-template-columns: repeat(4, calc(100% / 5));
+    grid-template-rows: repeat(8, 100px);
+  }
+  .empty-spacer-1,
+  .empty-spacer-2 {
+    display: none;
+  }
+}
+
+@media (min-width: 922px) {
+  .gallery .row > div {
+    margin-bottom: 5rem;
+  }
+
+  .periodic-table {
+    grid-template-columns: repeat(9, calc(100% / 10));
+    grid-template-rows: repeat(4, 100px);
+  }
+  .empty-spacer-1,
+  .empty-spacer-2 {
+    display: block;
   }
 }
