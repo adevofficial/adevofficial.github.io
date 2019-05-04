@@ -16,8 +16,11 @@
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="nav-logo.svg">
-  <defs
-     id="defs2" />
+ <defs>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+</style>
+</defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
