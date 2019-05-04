@@ -24,24 +24,24 @@
             position: fixed;
             z-index: 100;
             color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .center-head {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
         }
 
         .loader h1 {
-            position: absolute;
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
             font-size: 12px;
             text-transform: uppercase;
-            /* left: 50%; */
-            /* top: 58%; */
-            margin-left: 1.2rem;
+
             margin-top: 2rem;
         }
 
@@ -341,7 +341,7 @@
             <span></span>
         </div>
         <div class="center-head">
-            <h1>ADev is in flight will land soon ...</h1>
+            <h1>ADev land soon ...</h1>
         </div>
     </div>
 
@@ -353,9 +353,8 @@
     <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
 
     <nav id="start" class="navbar navbar-expand-md  navbar-dark bg-none">
-        <a class="navbar-brand" href="#">
-
-            <img src="./img//nav-logo.svg" alt="" srcset="">
+        <a class="navbar-brand" href="#home">
+            <img src="./img/nav-logo.svg" alt="ADev">
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -844,9 +843,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
@@ -854,16 +850,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.2/dist/typeit.min.js"></script>
-    <script>
-        AOS.init(
-            // { disable: "mobile" }
-        );
-    </script>
+
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script>
+        AOS.init();
+
         function getRandomInt(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
@@ -1221,51 +1215,39 @@
             new TypeIt('#app-type', {
                 strings: ['web app', 'mobile app'],
                 beforeString: (step, queue, instance) => {
-                    // instance.empty();
                 }, loop: true,
                 lifeLike: true,
                 breakLines: false,
                 nextStringDelay: [2000, 100],
                 loopDelay: [100, 2000]
             }).go();
-            // new TypeIt('#adev-name', { loop: true })
-            //     .empty()
-            //     .type("Amal Chandran")
-            //     .pause(2000)
-            //     .empty()
-            //     .type('ADev')
-            //     .pause(2000)
-            //     .go();
-            document.addEventListener('aos:in', ({ detail }) => {
-                console.log('animated in', detail);
 
-            });
-            document.addEventListener('aos:out', ({ detail }) => {
-                console.log('animated out', detail);
-            });
+
             $('body').imagesLoaded(function () {
                 setTimeout(function () {
                     $('.loader').hide();
                 }, 2000)
 
             });
+
+            $(".gallery-image").hover(
+                function () {
+                    $("#" + $(this).data('details')).addClass("active");
+                }, function () {
+                    $("#" + $(this).data('details')).removeClass("active");
+                }
+            );
+
+            $(".gallery-details").hover(
+                function () {
+                    $(".gallery-image[data-details=" + $(this).attr('id') + "]").addClass("active").addClass("animated");
+                }, function () {
+                    $(".gallery-image[data-details=" + $(this).attr('id') + "]").removeClass("active").removeClass("animated");
+
+                }
+            );
+
         });
-        $(".gallery-image").hover(
-            function () {
-                $("#" + $(this).data('details')).addClass("active");
-            }, function () {
-                $("#" + $(this).data('details')).removeClass("active");
-            }
-        );
-        $(".gallery-details").hover(
-            function () {
-                $(".gallery-image[data-details=" + $(this).attr('id') + "]").addClass("active").addClass("animated");
-            }, function () {
-                $(".gallery-image[data-details=" + $(this).attr('id') + "]").removeClass("active").removeClass("animated");
-
-            }
-        );
-
 
     </script>
 </body>
